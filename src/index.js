@@ -1,10 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
-import { createStore } from 'redux';
+import selectButton from "./reducers/selectButton";
+import { createStore } from "redux";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const store = createStore(selectButton);
+ReactDOM.render(<App store={store} />, document.getElementById("root"));
