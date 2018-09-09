@@ -40,7 +40,17 @@ function CountrySelector({ countryListOpen, selectedCountry, dispatch }) {
     });
   }
 
-  function handleSubmit(event) {}
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (selectedCountry) {
+      dispatch({
+        type: "ADD_COUNTRY",
+        country: selectedCountry
+      });
+    } else {
+      alert("Please choose the country from the list");
+    }
+  }
 
   const listClasses = cx("country-input__list", {
     "country-input__list--visible": countryListOpen
