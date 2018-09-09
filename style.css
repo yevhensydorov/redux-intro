@@ -13,3 +13,11 @@
   background-color: #550527;
   border: 2px solid white;
 }
+
+.country-input__list {
+  display: none;
+}
+
+.country-input__list--visible {
+  display: block;
+}
