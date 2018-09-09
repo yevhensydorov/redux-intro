@@ -49,7 +49,10 @@ class App extends React.Component {
           countryListOpen={this.state.countryListOpen}
           dispatch={this.props.store.dispatch}
         />
-        <CountriesVisited countries={this.state.countriesVisited} />
+        <CountriesVisited
+          countries={this.state.countriesVisited}
+          dispatch={this.props.store.dispatch}
+        />
       </div>
     );
   }
